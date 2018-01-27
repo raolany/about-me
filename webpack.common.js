@@ -1,8 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const DashboardPlugin = require('webpack-dashboard/plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     entry: './App.jsx',
@@ -40,11 +38,10 @@ module.exports = {
     },
     resolve: {
         alias: {
-            components: path.resolve(__dirname, 'srs/components')
+            components: path.resolve(__dirname, 'src/components')
         }
     },
     plugins: [
-        new CleanWebpackPlugin(['build']),
         new ExtractTextPlugin({
             filename: 'styles.min.css',
             allChunks: true
@@ -52,8 +49,6 @@ module.exports = {
         new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': process.env.NODE_ENV,
-        }),
-        new DashboardPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
+        })
     ]
 }

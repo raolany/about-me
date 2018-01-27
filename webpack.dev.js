@@ -1,9 +1,17 @@
+const webpack = require('webpack');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
-   devtool: 'inline-source-map',
-   devServer: {
-     contentBase: './build'
-   }
+    devtool: 'inline-source-map',
+    devServer: {
+        contentBase: './',
+        compress: true,
+        port: 3000,
+        hot: true,
+        publicPath: '/build/'
+    },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin(),
+    ]
 });
