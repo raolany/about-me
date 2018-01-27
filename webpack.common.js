@@ -8,7 +8,8 @@ module.exports = {
     entry: './App.jsx',
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        publicPath: '/'
     },  
     module: {
         loaders: [
