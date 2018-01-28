@@ -15,7 +15,7 @@ module.exports = {
                 loader: "babel-loader",
                 exclude: /node_modules/,
                 query: {
-                    presets: ['es2015', 'react']
+                    presets: ['es2015', 'stage-0', 'react']
                 }
             },
             {
@@ -38,8 +38,11 @@ module.exports = {
     },
     resolve: {
         alias: {
-            components: path.resolve(__dirname, 'src/components')
-        }
+            components: path.resolve(__dirname, 'src/components/'),
+            pages: path.resolve(__dirname, 'src/pages/'),
+            core: path.resolve(__dirname, 'src/core/'),
+        },
+        extensions: [ '.js', '.jsx', '.scss' ],
     },
     plugins: [
         new ExtractTextPlugin({
