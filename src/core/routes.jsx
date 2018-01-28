@@ -3,7 +3,7 @@ import {BrowserRouter, Redirect} from 'react-router-dom';
 import * as Pages from 'pages';
 import BaseRoute from './base-route';
 
-const production = false;
+const production = true;
 
 export default class Routes extends React.Component {
   render() {
