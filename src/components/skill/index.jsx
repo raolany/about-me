@@ -11,7 +11,8 @@ export default class Skill extends React.Component {
       <div className="skill">
         <img src={img}/>
         <b>{name}</b>
-        <Rate count={5} value={mark} allowHalf={true} onHoverChange={() => {}}/>
+        <Rate count={5} value={mark} allowHalf={true}/>
+        <div></div>
       </div>
     );
   }

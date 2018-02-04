@@ -63,7 +63,7 @@ const Skills =
       {
         name: 'C#',
         img: SkillImg.CSHARP,
-        mark: 4.5
+        mark: 4
       },
       {
         name: '.NET Framework',
@@ -73,7 +73,7 @@ const Skills =
       {
         name: '.NET Core',
         img: SkillImg.DOTNETCORE,
-        mark: 4
+        mark: 3.5
       },
       {
         name: 'ASP.NET MVC',
@@ -88,17 +88,17 @@ const Skills =
       {
         name: 'Microsoft SQL Server',
         img: SkillImg.MSSQL,
-        mark: 4
+        mark: 3.5
       },
       {
         name: 'MySQL',
         img: SkillImg.MYSQL,
-        mark: 4
+        mark: 3.5
       },
       {
         name: 'PostgreSQL',
         img: SkillImg.POSTGRESQL,
-        mark: 3
+        mark: 2
       },
     ]
   };
