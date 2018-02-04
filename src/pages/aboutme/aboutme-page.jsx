@@ -9,7 +9,7 @@ export default class AboutMePage extends React.Component {
     return (
       <div className="about-me">
         <div className="section-info">
-          <b>Andrii Rak111</b>
+          <b>Andrii Rak</b>
           <span>Fullstack .NET developer</span>
         </div>
         <div className="section-skills">

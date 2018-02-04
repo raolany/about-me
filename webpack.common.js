@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -25,10 +24,7 @@ module.exports = {
             },
             {
                 test: /\.(css|scss)$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: ['css-loader', 'sass-loader']
-                })
+                loader: "style-loader!css-loader!sass-loader"
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,
@@ -51,10 +47,6 @@ module.exports = {
         extensions: [ '.js', '.jsx', '.scss', '.css' ],
     },
     plugins: [
-        new ExtractTextPlugin({
-            filename: 'styles.min.css',
-            allChunks: true
-        }),
         new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': process.env.NODE_ENV,
