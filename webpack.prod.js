@@ -7,7 +7,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = merge(common, {
     devtool: 'source-map',
     plugins: [
-        new CleanWebpackPlugin(['build']),
+        new CleanWebpackPlugin(['dist']),
         new webpack.optimize.UglifyJsPlugin({
             cache: true,
             parallel: true,

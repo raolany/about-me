@@ -1,0 +1,38 @@
+$imgWidth: 50px;
+
+.skill {
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  transition: all .3s ease;
+  position: relative;
+  &:hover {
+    transform: scale(1.2) /*rotateY(360deg)*/;
+    cursor: pointer;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: transparent;
+    z-index: 1;
+  }
+  >img{
+    width: $imgWidth;
+    height: $imgWidth;
+  }
+  >b{
+    line-height: $imgWidth;
+    display: block;
+  }
+  .rc-rate {
+    >.rc-rate-star{
+      transform: none;
+      margin: 0;
+      color: #7b7a7a;
+    }
+  }
+}
