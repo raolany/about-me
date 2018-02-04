@@ -3,15 +3,13 @@ const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
-    devtool: 'inline-source-map',
-    devServer: {
-        contentBase: './',
-        compress: true,
-        port: 3000,
-        hot: true,
-        publicPath: '/build/',
-        historyApiFallback: true
-    },
+    entry: [
+        'babel-polyfill', 
+        'react-hot-loader/patch', 
+        'webpack-dev-server/client?http://localhost:3000',
+        'webpack/hot/only-dev-server',
+        './App.jsx'],
+    devtool: 'evel',//'inline-source-map',
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
     ]

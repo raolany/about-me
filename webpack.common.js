@@ -6,18 +6,22 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: './App.jsx',
     output: {
-        path: path.resolve(__dirname, 'build'),
-        filename: 'bundle.js'
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'bundle.js',
+        publicPath: '/'
     },  
     module: {
         loaders: [
             {
                 test: /\.(js|jsx)$/,
-                loader: "babel-loader",
+                loader: 'babel-loader',
+                options: {
+                    cacheDirectory: true,
+                    plugins: [
+                      'react-hot-loader/babel'
+                    ]
+                  },
                 exclude: /node_modules/,
-                query: {
-                    presets: ['es2015', 'stage-0', 'react']
-                }
             },
             {
                 test: /\.(css|scss)$/,
@@ -55,8 +59,10 @@ module.exports = {
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': process.env.NODE_ENV,
         }),
-        // new HtmlWebpackPlugin({
-        //     template: 'index.html'
-        // })
+        new HtmlWebpackPlugin({
+            template: 'index.html',
+            inject: 'body',
+            filename: 'index.html'
+        }),
     ]
 }

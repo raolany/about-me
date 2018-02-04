@@ -1,15 +1,22 @@
 import React from 'react';
-import ReactDom from 'react-dom';
-import Routes from 'core/routes';
+import ReactDOM from 'react-dom';
+import App from 'core/app';
+import { AppContainer } from 'react-hot-loader'
 
-import './src/styles/main.scss';
-
-class App extends React.Component {
-    render() {
-        return (
-            <Routes />
-        );
-    }
+const render = Component => {
+  ReactDOM.render(
+    <AppContainer>
+      <Component />
+    </AppContainer>,
+    document.getElementById('root'),
+  )
 }
 
-ReactDom.render(<App />, document.getElementById('root'));
+render(App);
+
+if (module.hot) {
+  module.hot.accept('core/app', () => {
+    const nextApp = require('core/app').default;
+    render(nextApp)
+  })
+}
