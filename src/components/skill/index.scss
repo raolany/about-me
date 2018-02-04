@@ -3,18 +3,18 @@ $imgWidth: 50px;
 .skill {
   display: inline-block;
   margin: 10px;
-  // &:first-of-type {
-  //   margin-left: 0;
-  // } 
-  // &:last-of-type {
-  //   margin-right: 0;
-  // }
+  text-align: center;
+  transition: all .3s ease;
+  &:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
   >img{
     width: $imgWidth;
     height: $imgWidth;
   }
   >b{
     line-height: $imgWidth;
-    margin-left: 5px;
+    display: block;
   }
 }

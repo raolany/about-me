@@ -2,14 +2,25 @@ import React from 'react';
 import Skill from 'components/skill';
 import {Skills} from 'constants';
 
+import './aboutme-page.scss';
+
 export default class AboutMePage extends React.Component {
   render() {
     return (
-      <div>
+      <div className="about-me">
         <div className="section-skills">
-          {Skills.map((x, i) => {
-            return <Skill key={i} name={x.name} img={x.img}/>
-          })}
+          <div>
+            <b>Frontend:</b>
+            {Skills.front.map((x, i) => {
+              return <Skill key={i} name={x.name} img={x.img}/>
+            })}
+          </div>
+          <div>
+            <b>Backend:</b>
+            {Skills.back.map((x, i) => {
+              return <Skill key={i} name={x.name} img={x.img}/>
+            })}
+          </div>
         </div>
       </div>
     );
