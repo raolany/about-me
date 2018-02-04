@@ -3,7 +3,7 @@ import {BrowserRouter, Redirect} from 'react-router-dom';
 import * as Pages from 'pages';
 import BaseRoute from './base-route';
 
-const production = true;
+const production = false;
 
 export default class Routes extends React.Component {
   render() {
@@ -11,9 +11,9 @@ export default class Routes extends React.Component {
       <BrowserRouter>
         <div>
           <BaseRoute exact path='/' component={production ? Pages.UnavailablePage : Pages.AboutMePage}/>
-          <BaseRoute path='/' component={() => {
+          {/* <BaseRoute path='/' component={() => {
             return <Redirect to='/'/>
-          }}/>
+          }}/> */}
         </div>
       </BrowserRouter>
     );
