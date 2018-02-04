@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: './App.jsx',
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, ''),
         filename: 'bundle.js',
         publicPath: '/'
     },  
@@ -60,7 +60,7 @@ module.exports = {
             'process.env.NODE_ENV': process.env.NODE_ENV,
         }),
         new HtmlWebpackPlugin({
-            template: 'index.html',
+            template: 'src/index.html',
             inject: 'body',
             filename: 'index.html'
         }),
