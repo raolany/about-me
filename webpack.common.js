@@ -20,7 +20,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.scss$/,
+                test: /\.(css|scss)$/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: ['css-loader', 'sass-loader']
@@ -44,7 +44,7 @@ module.exports = {
             images: path.resolve(__dirname, 'src/images/'),
             constants: path.resolve(__dirname, 'src/constants/'),
         },
-        extensions: [ '.js', '.jsx', '.scss' ],
+        extensions: [ '.js', '.jsx', '.scss', '.css' ],
     },
     plugins: [
         new ExtractTextPlugin({

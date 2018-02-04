@@ -12,13 +12,13 @@ export default class AboutMePage extends React.Component {
           <div>
             <b>Frontend:</b>
             {Skills.front.map((x, i) => {
-              return <Skill key={i} name={x.name} img={x.img}/>
+              return <Skill key={i} name={x.name} img={x.img} mark={x.mark}/>
             })}
           </div>
           <div>
             <b>Backend:</b>
             {Skills.back.map((x, i) => {
-              return <Skill key={i} name={x.name} img={x.img}/>
+              return <Skill key={i} name={x.name} img={x.img} mark={x.mark}/>
             })}
           </div>
         </div>

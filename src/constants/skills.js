@@ -5,77 +5,100 @@ const Skills =
     front: [
       {
         name: 'HTML',
-        img: SkillImg.HTML
+        img: SkillImg.HTML,
+        mark: 5
       },
       {
         name: 'CSS',
-        img: SkillImg.CSS
+        img: SkillImg.CSS,
+        mark: 5
       },
       {
         name: 'Sass',
-        img: SkillImg.SASS
+        img: SkillImg.SASS,
+        mark: 5
       },
       {
         name: 'JavaScript',
-        img: SkillImg.JS
+        img: SkillImg.JS,
+        mark: 5
       },
       {
         name: 'Node.js',
-        img: SkillImg.NODEJS
+        img: SkillImg.NODEJS,
+        mark: 3
       },
       {
         name: 'Webpack',
-        img: SkillImg.WEBPACK
+        img: SkillImg.WEBPACK,
+        mark: 5
       },
       {
         name: 'NPM',
-        img: SkillImg.NPM
+        img: SkillImg.NPM,
+        mark: 5
       },
       {
         name: 'ReactJS',
-        img: SkillImg.REACT
+        img: SkillImg.REACT,
+        mark: 4.5
       },
       {
         name: 'Redux',
-        img: SkillImg.REDUX
+        img: SkillImg.REDUX,
+        mark: 4
       },
       {
         name: 'jQuery',
-        img: SkillImg.JQUERY
+        img: SkillImg.JQUERY,
+        mark: 4
       },
       {
         name: 'Knockout',
-        img: SkillImg.KNOCKOUT
+        img: SkillImg.KNOCKOUT,
+        mark: 4.5
       },
     ],
     back: [
       {
         name: 'C#',
-        img: SkillImg.CSHARP
+        img: SkillImg.CSHARP,
+        mark: 4.5
       },
       {
         name: '.NET Framework',
-        img: SkillImg.DOTNET
+        img: SkillImg.DOTNET,
+        mark: 4
       },
       {
         name: '.NET Core',
-        img: SkillImg.DOTNETCORE
+        img: SkillImg.DOTNETCORE,
+        mark: 4
       },
       {
         name: 'ASP.NET MVC',
-        img: SkillImg.ASP
+        img: SkillImg.ASP,
+        mark: 5
       },
       {
         name: 'SQL',
-        img: SkillImg.SQL
+        img: SkillImg.SQL,
+        mark: 4
       },
       {
         name: 'Microsoft SQL Server',
-        img: SkillImg.MSSQL
+        img: SkillImg.MSSQL,
+        mark: 4
       },
       {
-        name: 'MySQL  ',
-        img: SkillImg.MYSQL
+        name: 'MySQL',
+        img: SkillImg.MYSQL,
+        mark: 4
+      },
+      {
+        name: 'PostgreSQL',
+        img: SkillImg.POSTGRESQL,
+        mark: 3
       },
     ]
   };
