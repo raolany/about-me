@@ -1,0 +1,35 @@
+$imgWidth: 50px;
+
+.contact {
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  transition: all .3s ease;
+  position: relative;
+  &:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    img{
+      // animation: vibro 1.3s;
+    }
+  }
+  img{
+    width: $imgWidth;
+    height: $imgWidth;
+  }
+  >div,>b,>input{
+    // display: none;
+  }
+}
+
+@keyframes vibro{
+  from {
+    transform: rotateZ(0) scale(1)
+  }
+  50% {
+    transform: rotateZ(0) scale(0.6)
+  }
+  to {
+    transform: rotateZ(-360deg) scale(1.2)
+  }
+}

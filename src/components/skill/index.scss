@@ -9,6 +9,10 @@ $imgWidth: 50px;
   &:hover {
     transform: scale(1.2) /*rotateY(360deg)*/;
     cursor: pointer;
+    >img {
+      
+    animation: skill 1.3s infinite;
+    }
   }
   &:after {
     content: '';
@@ -34,5 +38,17 @@ $imgWidth: 50px;
       margin: 0;
       color: #7b7a7a;
     }
+  }
+}
+
+@keyframes skill{
+  from {
+    transform:scale(1)
+  }
+  60% {
+    transform:scale(1.1);
+  }
+  to {
+    transform: scale(1)
   }
 }
