@@ -13,7 +13,7 @@ const contacts = [
   },
   {
     name: 'Phone',
-    value: '+38(095)931-22-46',
+    value: '+38 (095) 931-22-46',
     img: Contacts.Phone
   },
   {
