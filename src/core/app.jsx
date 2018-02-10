@@ -8,7 +8,7 @@ class App extends React.Component {
     return (
       <div>
         <Routes />
-        <ReactTooltip place='bottom' type='info' effect='solid' 
+        <ReactTooltip place='left' type='info' effect='solid' 
           delayShow={100} html={true} 
           className="tooltip" multiline={true}/>
       </div>

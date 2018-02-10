@@ -12,10 +12,6 @@ export default class Contact extends React.Component {
     return (
       <div className="contact" data-tip={tip} onClick={() => {copy(url || value)}}>
         {url ? <a target='blank' href={url}>{imgTag}</a> : imgTag}
-        
-        {/* <b>{name}</b> */}
-        {/* <input value={value} type='text' ref={x => this.value = x}/>
-        <div>{value}</div> */}
       </div>
     );
   }
