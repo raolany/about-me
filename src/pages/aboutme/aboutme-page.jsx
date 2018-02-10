@@ -11,17 +11,19 @@ export default class AboutMePage extends React.Component {
       <div className="about-me">
         <div className="section-info">
           <div className="avatar"></div>
-          <div className="title">
-            <b>Andrii Rak</b>
-            <span>Fullstack .NET developer</span>
-            <div>
-              <span>Ukraine, Kyiv</span>
+          <div className="info">
+            <div className="title">
+              <b>Andrii Rak</b>
+              <span>Fullstack .NET developer</span>
+              <div>
+                <span>Ukraine, Kyiv</span>
+              </div>
             </div>
-          </div>
-          <div className="contacts">
-            {Contacts.map((x, i) => {
-              return <Contact key={i} name={x.name} value={x.value} img={x.img} url={x.url}/>
-            })}
+            <div className="contacts">
+              {Contacts.map((x, i) => {
+                return <Contact key={i} name={x.name} value={x.value} img={x.img} url={x.url}/>
+              })}
+            </div>
           </div>
         </div>
         <div className="section-skills">

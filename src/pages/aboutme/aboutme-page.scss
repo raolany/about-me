@@ -3,51 +3,71 @@
     // background: url(./header-min.jpg);
     background-position: center;
     background-size: cover;
-    // height: 300px;
-    max-width: 1100px;
+    max-width: 900px;
     margin: 50px auto;
     padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
     align-self: center;
-    >div {
-      display: flex;
-      align-self: center;
-    }
+    position: relative;
     >.avatar{
       width: 300px;
       height: 300px;
       background-color: white;
       border-radius: 50%;
       box-shadow: #d0cfcf 0 0 15px 5px;
-      background: url(./header-min.jpg);
+      background: url(./face-min.png);
       background-position: center;
       background-size: cover;
       border: solid 5px white;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
     }
-    >.title{
-      margin: 0 20px;
-      flex-direction: column;
-      >b{
-        font-size: 50px;
-        color: white;
-        text-transform: uppercase;
-        display: block
-      }
-      >span{
-        text-align: center;
-        display: block;
-        font-style: italic;
-        font-weight: bold;
-      }
+    >.info {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 320px;
       >div {
+        display: flex;
+        align-self: center;
+      }
+      >.title{
+        margin: 0 20px;
+        flex-direction: column;
         text-align: center;
-        >span {
+        >b{
+          font-size: 50px;
+          color: white;
+          text-transform: uppercase;
+          display: block
+        }
+        >span{
+          text-align: center;
+          display: block;
+          font-style: italic;
+          font-weight: bold;
         }
       }
+      >.contacts{
+        flex-direction: column;
+      }
     }
-    >.contacts{
-      flex-direction: column;
+    @media all and (max-width: 725px) {
+      >.avatar{
+        position: initial;
+        top: initial;
+        transform: none;
+        margin: auto;
+      }
+      >.info {
+        margin: auto;
+        flex-direction: column;
+        >div{
+          margin: 20px 0 !important;
+        }
+        >.contacts{
+          flex-direction: row;
+        }
+      }
     }
   }
   >.section-skills{
