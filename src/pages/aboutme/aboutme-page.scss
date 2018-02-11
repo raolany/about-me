@@ -1,4 +1,13 @@
 .about-me {
+  h2 {
+    text-align: center;
+    display: block;
+    margin: 20px 0;
+    text-transform: uppercase;
+    background-color: white;
+    padding: 10px;
+    box-shadow: #ccc8c885 0 0 20px;
+  }
   >.info{
     background: url(./images/header-min.jpg);
     background-position: center;
@@ -39,7 +48,7 @@
         transition: all .5s ease;
         &:hover {
           transform: translateY(-50%) scale(1.1);
-          border-radius: 10%;
+          // border-radius: 10%;
         }
       }
       >.info {
@@ -117,19 +126,9 @@
     }
   }
   >.skills{
-    >div {
-      text-align: center;
-      >b {
-        display: block;
-        margin: 20px 0;
-        text-transform: uppercase;
-        background-color: white;
-        padding: 10px;
-        box-shadow: #ccc8c885 0 0 20px;
-      }
-      &:first-of-type > b{
-        margin-top: 0;
-      }
+    text-align: center;
+    >h2:first-of-type{
+      margin-top: 0;
     }
   }
 }

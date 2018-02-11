@@ -1,7 +1,8 @@
 import React from 'react';
 import Skill from 'components/skill';
 import Contact from 'components/contact';
-import {Skills, Contacts} from 'constants';
+import TimelineComponent from 'components/timeline';
+import {Skills, Contacts, TimeLine} from 'constants';
 
 import './aboutme-page.scss';
 
@@ -26,28 +27,32 @@ export default class AboutMePage extends React.Component {
             </div>
           </div>
           <div className='summary'>
-          <p>
-            I`m Fullstack .Net Developer with more than 2 years of experience. Experienced in all stages of the development cycle for web projects.
-            Well-versed in numerous programmng languages including C#, JavaScript and SQL.
-            Interest in architecture, OOP, Refactoring, “the perfect code” and effective development
-            methods. Constant search for answers to the question “how else can I exert myself and
-            improve the quality of my work?”
-          </p>
-        </div>
+            <p>
+              I`m Fullstack .Net Developer with more than 2 years of experience. Experienced in all stages of the development cycle for web projects.
+              Well-versed in numerous programmng languages including C#, JavaScript and SQL.
+              Interest in architecture, OOP, Refactoring, “the perfect code” and effective development
+              methods. Constant search for answers to the question “how else can I exert myself and
+              improve the quality of my work?”
+            </p>
+          </div>
         </div>
         <div className="skills">
+          <h2>Frontend</h2>
           <div>
-            <b>Frontend:</b>
             {Skills.front.map((x, i) => {
               return <Skill key={i} name={x.name} img={x.img} mark={x.mark}/>
             })}
           </div>
+          <h2>Backend</h2>
           <div>
-            <b>Backend:</b>
             {Skills.back.map((x, i) => {
               return <Skill key={i} name={x.name} img={x.img} mark={x.mark}/>
             })}
           </div>
+        </div>
+        <div className="timeline-section">
+          <h2>Time line</h2>
+          <TimelineComponent timeline={TimeLine}/>
         </div>
       </div>
     );
