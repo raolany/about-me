@@ -9,7 +9,7 @@ export default class AboutMePage extends React.Component {
   render() {
     return (
       <div className="about-me">
-        <div className="section-info">
+        <div className="info">
           <div>
             <div className="avatar"></div>
             <div className="info">
@@ -25,8 +25,17 @@ export default class AboutMePage extends React.Component {
               </div>
             </div>
           </div>
+          <div className='summary'>
+          <p>
+            I`m Fullstack .Net Developer with more than 2 years of experience. Experienced in all stages of the development cycle for web projects.
+            Well-versed in numerous programmng languages including C#, JavaScript and SQL.
+            Interest in architecture, OOP, Refactoring, “the perfect code” and effective development
+            methods. Constant search for answers to the question “how else can I exert myself and
+            improve the quality of my work?”
+          </p>
         </div>
-        <div className="section-skills">
+        </div>
+        <div className="skills">
           <div>
             <b>Frontend:</b>
             {Skills.front.map((x, i) => {
