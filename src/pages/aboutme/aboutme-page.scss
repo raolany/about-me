@@ -31,10 +31,11 @@
         background: url(./face-min.png);
         background-position: center;
         background-size: cover;
+        background-repeat: no-repeat;
         border: solid 5px white;
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
+        transform: translateY(-50%) scale(1);
         transition: all .5s ease;
         &:hover {
           transform: translateY(-50%) scale(1.1);
@@ -44,7 +45,7 @@
       >.info {
         display: flex;
         justify-content: space-between;
-        margin-left: 320px;
+        margin-left: 330px;
         >div {
           display: flex;
           align-self: center;
@@ -70,13 +71,14 @@
           }
           >label{
             font-weight: bold;
+            color: #3c3a49;
           }
         }
         >.contacts{
           flex-direction: column;
           background-color: #ffffffad;
           border-radius: 5px;
-          box-shadow: #7485a2 0 0 20px 1px;
+          box-shadow: #d9d6cd 0 0 20px 1px
         }
       }
       @media all and (max-width: 725px) {
