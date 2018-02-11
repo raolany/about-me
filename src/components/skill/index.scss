@@ -7,11 +7,9 @@ $imgWidth: 50px;
   transition: all .3s ease;
   position: relative;
   &:hover {
-    transform: scale(1.2) /*rotateY(360deg)*/;
-    cursor: pointer;
+    transform: scale(1.2);
     >img {
-      
-    animation: skill 1.3s infinite;
+      animation: skill 1.3s infinite;
     }
   }
   &:after {

@@ -1,0 +1,29 @@
+.footer {
+  background-color: #111a21;
+  margin-top: 30px;
+  box-shadow: #ccc8c885 0 0 20px;
+  // background: url(./bg.jpg);
+  background-position: center;
+  background-size: cover;
+  color: rgba(215, 216, 220, 0.8);
+  >div {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    >.contacts {
+      color: #eeedf1;
+      >div{
+        margin: 5px 0;
+      }
+    }
+    >.copy {
+      text-align: center;
+      margin-top: 20px;
+      > * {
+        display: block;
+        font-weight: normal;
+        font-size: 14px;
+      }
+    }
+  }
+}
