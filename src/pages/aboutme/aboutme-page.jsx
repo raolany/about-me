@@ -1,12 +1,13 @@
+//@flow
 import React from 'react';
 import Skill from 'components/skill';
 import Contact from 'components/contact';
 import TimelineComponent from 'components/timeline';
-import {Skills, Contacts, TimeLine} from 'constants';
+import { Skills, Contacts, TimeLine } from 'constants';
 
 import './aboutme-page.scss';
 
-export default class AboutMePage extends React.Component {
+export default class AboutMePage extends React.Component<void, void> {
   render() {
     return (
       <div className="about-me">
@@ -21,7 +22,7 @@ export default class AboutMePage extends React.Component {
               </div>
               <div className="contacts">
                 {Contacts.map((x, i) => {
-                  return <Contact key={i} name={x.name} value={x.value} img={x.img} url={x.url}/>
+                  return <Contact key={i} name={x.name} value={x.value} img={x.img} url={x.url} />
                 })}
               </div>
             </div>
@@ -39,20 +40,20 @@ export default class AboutMePage extends React.Component {
         <div className="skills">
           <h2>Frontend</h2>
           <div>
-            {Skills.front.map((x, i) => {
-              return <Skill key={i} name={x.name} img={x.img} mark={x.mark}/>
+            {Skills.front.map((x: any, i: number) => {
+              return <Skill key={i} name={x.name} img={x.img} mark={x.mark} />
             })}
           </div>
           <h2>Backend</h2>
           <div>
-            {Skills.back.map((x, i) => {
-              return <Skill key={i} name={x.name} img={x.img} mark={x.mark}/>
+            {Skills.back.map((x: any, i: number) => {
+              return <Skill key={i} name={x.name} img={x.img} mark={x.mark} />
             })}
           </div>
         </div>
         <div className="timeline-section">
           <h2>Time line</h2>
-          <TimelineComponent timeline={TimeLine}/>
+          <TimelineComponent timeline={TimeLine} />
         </div>
       </div>
     );

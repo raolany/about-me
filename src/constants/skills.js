@@ -1,6 +1,7 @@
+//@flow
 import * as SkillImg from 'images/skills';
 
-const Skills = 
+const Skills: any =
   {
     front: [
       {

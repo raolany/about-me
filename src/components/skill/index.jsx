@@ -1,17 +1,24 @@
-import React from 'react';
+//@flow
+import React, { Component } from 'react';
 import Rate from 'rc-rate';
 
 import 'rc-rate/assets/index.css';
 import './index.scss';
 
-export default class Skill extends React.Component {
+type SkillType = {
+  name: string,
+  img: string,
+  mark: number
+}
+
+export default class Skill extends Component<SkillType, void> {
   render() {
-    const {name, img, mark} = this.props;
+    const { name, img, mark } = this.props;
     return (
       <div className="skill">
-        <img src={img}/>
+        <img src={img} />
         <b>{name}</b>
-        <Rate count={5} value={mark} allowHalf={true}/>
+        <Rate count={5} value={mark} allowHalf={true} />
         <div></div>
       </div>
     );
